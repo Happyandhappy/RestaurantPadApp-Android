@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/category_text"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:text="DESTILADOS"
+    android:gravity="left|center_vertical"
+    android:paddingTop="@dimen/listview_vertical_padding"
+    android:paddingBottom="@dimen/listview_vertical_padding"
+    android:paddingLeft="@dimen/listview_child_horizontal_padding"
+    android:paddingRight="@dimen/listview_horizontal_padding"
+    android:textSize="18sp"/>

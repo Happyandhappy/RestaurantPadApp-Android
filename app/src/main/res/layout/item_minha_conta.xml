@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:background="@color/prune">
+
+    <com.example.fleissig.restaurantapp.ui.widgets.textviews.RoxwinRegularTextView
+        android:id="@+id/tvPedidoItemName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/listview_horizontal_padding"
+        android:layout_toLeftOf="@+id/btnXClose"
+        android:text="STEAK TARTAR"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvPedidoItemName"
+        >
+
+        <com.example.fleissig.restaurantapp.ui.widgets.textviews.RoxwinRegularTextView
+            android:id="@+id/tvQuantidade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/listview_horizontal_padding"
+            android:text="STEAK TARTAR"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <com.example.fleissig.restaurantapp.ui.widgets.textviews.RoxwinRegularTextView
+            android:id="@+id/tvTotalAdjustment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/listview_horizontal_padding"
+            android:layout_marginRight="@dimen/listview_horizontal_padding"
+            android:text="R$ 83"
+            android:textSize="22sp"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

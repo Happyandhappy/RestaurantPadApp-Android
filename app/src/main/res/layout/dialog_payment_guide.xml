@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:focusableInTouchMode="true"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="15dp"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp"
+    android:paddingTop="15dp">
+
+    <com.example.fleissig.restaurantapp.ui.widgets.textviews.RoxwinRegularTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PARA PAGAR PARTE DA CONTA OU O VALOR INTEGRAL"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <com.example.fleissig.restaurantapp.ui.widgets.textviews.RoxwinRegularTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PASSE O CARTÃO COMO INDICADO ABAIXO"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+        <include layout="@layout/view_progress"  />
+
+        <ImageView
+            android:visibility="invisible"
+            android:id="@+id/ivCardSwipe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/swipe_card" />
+    </RelativeLayout>
+
+    <com.example.fleissig.restaurantapp.ui.widgets.buttons.RoxwinRegularButton
+        android:id="@+id/btnSair"
+        style="@style/CommonButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="SAIR"
+        android:textSize="16sp" />
+</LinearLayout>

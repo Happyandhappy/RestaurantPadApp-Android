@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_review"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.fleissig.restaurantapp.ReviewActivity">
+
+    <TextView
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:background="@drawable/edit_text_background"
+        android:id="@+id/title_textview"
+        android:text="Ratings And Reviews"
+        android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize" />
+
+    <RatingBar
+        android:theme="@style/RatingBarReview"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@id/title_textview"
+        android:id="@+id/rating_ratingbar"
+        style="?android:attr/ratingBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:rating="5"
+        android:stepSize="1" />
+
+    <Button
+        android:textColor="@android:color/white"
+        android:background="@drawable/apptheme_btn_default_holo_light"
+        android:id="@+id/post_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Post" />
+
+    <EditText
+        android:gravity="top|left|start"
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/post_button"
+        android:layout_below="@id/rating_ratingbar"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:padding="10dp"
+        android:background="@drawable/edit_text_background"
+        android:ems="10"
+        android:inputType="text"
+        android:imeOptions="actionDone|flagNoExtractUi"
+        tools:text="Text\nText1" />
+
+</RelativeLayout>

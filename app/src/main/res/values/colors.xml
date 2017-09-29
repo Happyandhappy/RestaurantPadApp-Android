@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorAccent">@color/dish_buttons_color</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <color name="grey">#808080</color>
+    <color name="background">#E0D9BC</color>
+    <color name="prune">#96465B</color>
+    <color name="prune_darker">#7a3749</color>
+    <color name="white_darker">#EEEEEE</color>
+    <color name="bpTransparent">#00000000</color>
+    <color name="purple">#800080</color>
+    <color name="dark_purple">#660066</color>
+</resources>

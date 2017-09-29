@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Cardápio</string>
+    <string name="title_activity_payment">Pagar</string>
+    <string name="categorias">Categorias</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="adicionar">Adicionar ao Carrinho</string>
+    <string name="adicionar_item">Adicionar Item</string>
+    <string name="language_portugal">PORTUGUÊS</string>
+    <string name="language_english">ENGLISH</string>
+    <string name="partial_payment">PAGAR PARTE DA CONTA</string>
+    <string name="total_payment">FECHAR A CONTA</string>
+    <string name="confirmed_orders">MINHA CONTA</string>
+    <string name="orders_before_sent_to_the_kitchen">VISUALIZAR PEDIDOS</string>
+    <string name="send_request">ENVIAR PEDIDO</string>
+    <string name="close_account">FECHAR A CONTA</string>
+    <string name="close">Fechar</string>
+</resources>

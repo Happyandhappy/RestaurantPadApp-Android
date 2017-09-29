@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/category_root"
+    android:layout_height="wrap_content"
+    android:background="@drawable/category_item_selector">
+    <TextView
+        android:id="@+id/category_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left|center_vertical"
+        android:paddingBottom="@dimen/listview_vertical_padding"
+        android:paddingLeft="@dimen/listview_horizontal_padding"
+        android:paddingRight="@dimen/listview_horizontal_padding"
+        android:paddingTop="@dimen/listview_vertical_padding"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        tools:text="DESTILADOS" />
+</RelativeLayout>

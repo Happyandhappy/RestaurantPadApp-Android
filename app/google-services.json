@@ -1,0 +1,174 @@
+{
+  "project_info": {
+    "project_number": "375756760750",
+    "firebase_url": "https://mediaenergy-9535a.firebaseio.com",
+    "project_id": "mediaenergy-9535a",
+    "storage_bucket": "mediaenergy-9535a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:375756760750:android:2151cdc9176db7fe",
+        "android_client_info": {
+          "package_name": "com.binjar.kzr.advertisercc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "375756760750-rl7q1qo53p0ifkqu9tvfq2i98tt3ko9i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEOofqW1hq4Nlv1CIVSg1PLw2VntvfTAk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:375756760750:android:b51e7baddb597f4a",
+        "android_client_info": {
+          "package_name": "com.ionicframework.foodi454288"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "375756760750-29hhe3i0qnjd4oi7ch4oh541n6i0o1lb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ionicframework.foodi454288",
+            "certificate_hash": "8B35E43B4DCF8E5E9D194F1244E4CE119C457842"
+          }
+        },
+        {
+          "client_id": "375756760750-rl7q1qo53p0ifkqu9tvfq2i98tt3ko9i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEOofqW1hq4Nlv1CIVSg1PLw2VntvfTAk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "375756760750-rl7q1qo53p0ifkqu9tvfq2i98tt3ko9i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:375756760750:android:d4997f7e934408af",
+        "android_client_info": {
+          "package_name": "add.pisco"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "375756760750-c14flblmqel1hdor3srec8bi5irnqvju.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "add.pisco",
+            "certificate_hash": "8B35E43B4DCF8E5E9D194F1244E4CE119C457842"
+          }
+        },
+        {
+          "client_id": "375756760750-rl7q1qo53p0ifkqu9tvfq2i98tt3ko9i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEOofqW1hq4Nlv1CIVSg1PLw2VntvfTAk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "375756760750-rl7q1qo53p0ifkqu9tvfq2i98tt3ko9i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:375756760750:android:74ebd84abca8982f",
+        "android_client_info": {
+          "package_name": "com.example.fleissig.restaurantapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "375756760750-j1jegioh57g8i0abrdf1ifb3sbh0sl06.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.fleissig.restaurantapp",
+            "certificate_hash": "88AAB6DFFC39988FD5CC87D4C861181796EA7D6C"
+          }
+        },
+        {
+          "client_id": "375756760750-rl7q1qo53p0ifkqu9tvfq2i98tt3ko9i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEOofqW1hq4Nlv1CIVSg1PLw2VntvfTAk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "375756760750-rl7q1qo53p0ifkqu9tvfq2i98tt3ko9i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

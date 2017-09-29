@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:pet="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="20dp"
+    android:layout_marginTop="20dp"
+    android:background="@color/white"
+    android:paddingBottom="15dp"
+    android:paddingLeft="150dp"
+    android:paddingRight="150dp"
+    android:paddingTop="15dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:focusableInTouchMode="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <com.example.fleissig.restaurantapp.ui.widgets.textviews.RoxwinRegularTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total da Conta"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <com.example.fleissig.restaurantapp.ui.widgets.textviews.RoxwinRegularTextView
+            android:id="@+id/etTotalMinhaConta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R$ 0,00"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <com.example.fleissig.restaurantapp.ui.widgets.textviews.RoxwinRegularTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Valor que será debitado:"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/etTotalPagar"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edittext_border"
+            android:gravity="center"
+            android:inputType="numberDecimal"
+            android:padding="5dp"
+            android:text="R$0.00"
+            android:imeOptions="actionDone"
+            android:textColor="@color/black" />
+
+        <com.example.fleissig.restaurantapp.ui.widgets.textviews.RoxwinRegularTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="CVV do cartão"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/etCVV"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edittext_border"
+            android:gravity="center"
+            android:padding="5dp"
+            android:inputType="numberDecimal"
+            android:imeOptions="actionDone"
+            android:maxLength="3"
+            android:textColor="@color/black" />
+
+        <com.example.fleissig.restaurantapp.ui.widgets.textviews.RoxwinRegularTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="CPF"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <com.example.fleissig.restaurantapp.ui.widgets.patternededittext.PatternedEditText
+            android:id="@+id/etCPF"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edittext_border"
+            android:digits="0123456789.-"
+            android:gravity="center"
+            android:inputType="number"
+            android:imeOptions="actionDone"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            pet:pattern="xxx.xxx.xxx-xx"
+            pet:showPatternAsHint="true"
+            pet:specialChar="x" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/cvv" />
+
+        <com.example.fleissig.restaurantapp.ui.widgets.buttons.RoxwinRegularButton
+            android:id="@+id/btnConfirmar"
+            style="@style/BlackButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="CONFIRMAR PAGAMENTO"
+            android:textSize="16sp" />
+
+        <com.example.fleissig.restaurantapp.ui.widgets.buttons.RoxwinRegularButton
+            android:id="@+id/btnSair"
+            style="@style/CommonButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="CANCELAR"
+            android:textSize="16sp" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlPedido"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvCarrinhoPedido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Pedido"
+        android:textSize="25sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_below="@+id/tvCarrinhoPedido"
+        android:layout_alignParentStart="true">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvPedido"
+            android:layout_width="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_above="@+id/btnAdicionarItem"
+            android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+
+        <Button
+            android:id="@+id/btnAdicionarItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
+            android:background="@drawable/apptheme_btn_default_holo_light"
+            android:text="@string/adicionar_item"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rlBottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/tvTotalPedido"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Total Pedido: R$" />
+
+        <Button
+            android:id="@+id/btnFazerPedido"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="Fazer Pedido" />
+    </RelativeLayout>
+</RelativeLayout>
+

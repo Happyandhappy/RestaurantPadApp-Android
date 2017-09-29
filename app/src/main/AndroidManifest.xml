@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.fleissig.restaurantapp">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme.NoActionBar"
+        tools:replace="android:name">
+        <activity android:name=".test.FileDialog"></activity>
+        <activity
+            android:name=".ui.activities.SplashActivity"
+            android:screenOrientation="reverseLandscape"></activity>
+        <activity
+            android:name=".ui.activities.HomeActivity"
+            android:screenOrientation="reverseLandscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".WelcomeClientActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="reverseLandscape" />
+        <activity
+            android:name=".ui.activities.MenuListActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="reverseLandscape"></activity>
+        <activity
+            android:name=".ui.activities.DishDetailActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="reverseLandscape"></activity>
+        <activity android:name=".ui.activities.CarrinhoActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="reverseLandscape" />
+        <activity
+            android:name=".ui.activities.PagamentoActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="reverseLandscape"/>
+        <activity
+            android:name=".category.CategoriesActivity"
+            android:launchMode="singleTop">
+
+        </activity>
+        <activity
+            android:name=".subcategory.SubCategoriesActivity"
+            android:launchMode="singleTop"
+            android:parentActivityName=".category.CategoriesActivity"></activity>
+
+        <activity
+            android:name=".category.DishesActivity"
+            android:launchMode="singleTop"
+            android:parentActivityName=".category.CategoriesActivity">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".category.CategoriesActivity" />
+        </activity>
+        <activity
+            android:name=".subcategory.DishesSubCategories"
+            android:launchMode="singleTop"
+            android:parentActivityName=".subcategory.SubCategoriesActivity">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".subcategory.SubCategoriesActivity" />
+        </activity>
+        <activity
+            android:name=".category.DishActivity"
+            android:parentActivityName=".category.DishesActivity">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".category.DishesActivity" />
+        </activity>
+        <activity
+            android:name=".subcategory.SubCategoryDish"
+            android:parentActivityName=".subcategory.DishesSubCategories">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".subcategory.DishesSubCategories" />
+        </activity>
+
+        <activity
+            android:name=".order.CartActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".ReviewActivity"
+            android:parentActivityName=".category.DishActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".category.DishActivity" />
+        </activity>
+        <activity
+            android:name=".order.WaitingOrderActivity"
+            android:parentActivityName=".order.CartActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".order.CartActivity" />
+        </activity>
+
+        <service
+            android:name=".MyFirebaseInstanceIDService"
+            android:enabled="false"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".MyFirebaseMessagingService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".services.DownloadService"
+            android:exported="false" />
+
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings" />
+
+
+        <activity
+            android:name=".payment.PaymentActivity"
+            android:label="@string/title_activity_payment"></activity>
+    </application>
+
+</manifest>

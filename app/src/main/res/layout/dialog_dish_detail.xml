@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="400dp"
+    android:background="@color/white"
+    android:focusableInTouchMode="true">
+
+    <Button
+        android:id="@+id/btnXClose"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/prune_button_selector"
+        android:text="X"
+        android:textColor="@android:color/white"
+        android:textSize="22sp" />
+
+    <ImageView
+        android:id="@+id/ivDishAvatar"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_centerVertical="true"
+        android:layout_margin="@dimen/fab_margin"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/no_image" />
+
+    <RelativeLayout
+        android:id="@+id/rlTopLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="20dp"
+        android:layout_toRightOf="@+id/ivDishAvatar">
+
+        <com.example.fleissig.restaurantapp.ui.widgets.textviews.RoxwinBoldTextView
+            android:id="@+id/tvDishName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="TITLE"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="100dp"
+            android:layout_height="1dp"
+            android:layout_below="@+id/tvDishName"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/black"></View>
+
+        <com.example.fleissig.restaurantapp.ui.widgets.textviews.RoxwinRegularTextView
+            android:id="@+id/tvDishDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/divider"
+            android:text="Polvo grelhado com tomate defumado e Lulas à dorê com legumes crocantes e cmolho tárta"
+            android:textColor="@color/grey"
+            android:textSize="18sp" />
+
+        <com.example.fleissig.restaurantapp.ui.widgets.textviews.RoxwinRegularTextView
+            android:id="@+id/tvDishPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvDishDescription"
+            android:layout_marginTop="10dp"
+            android:text="R$ 56"
+            android:textColor="@color/prune"
+            android:textSize="35sp" />
+
+        <com.example.fleissig.restaurantapp.ui.widgets.textviews.RoxwinRegularTextView
+            android:id="@+id/tvTitleAboveDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvDishPrice"
+            android:layout_marginTop="10dp"
+            android:text="ESCREVA ABAIXO SE QUISER PERSONALIZAR O PEDIDO"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/etDishDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/rlBottomLayout"
+            android:layout_below="@+id/tvTitleAboveDescription"
+            android:layout_centerVertical="true"
+            android:background="@drawable/edittext_border"
+            android:imeOptions="actionDone|flagNoExtractUi"
+            android:inputType="text"
+            android:padding="5dp"
+            android:textColor="@color/black"></EditText>
+
+
+        <RelativeLayout
+            android:id="@+id/rlBottomLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerVertical="true">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnMinusItem"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="0.5dp"
+                    android:layout_marginRight="0.5dp"
+                    android:background="@color/grey"
+                    android:text="-"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" x "
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/quantity_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:text="2"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/btnPlusItem"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="0.5dp"
+                    android:layout_marginStart="0.5dp"
+                    android:background="@color/grey"
+                    android:text="+"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnAdicionar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/prune_button_selector"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="@string/adicionar"
+                android:textColor="@android:color/white"
+                android:textSize="22sp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

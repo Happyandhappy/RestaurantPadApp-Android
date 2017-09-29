@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/toolbarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="5dp">
+
+        <com.example.fleissig.restaurantapp.ui.widgets.buttons.RoxwinRegularButton
+            android:id="@+id/btnConfirmedOrders"
+            style="@style/toolbar_button_style_normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="@string/confirmed_orders" />
+
+
+        <View
+            android:id="@+id/centerAnchor"
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            android:layout_centerHorizontal="true"></View>
+
+
+        <com.example.fleissig.restaurantapp.ui.widgets.textviews.RoxwinRegularTextView
+            android:id="@+id/tvValorAtual"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="120dp"
+            android:layout_toRightOf="@+id/centerAnchor"
+            android:text="VALOR ATUAL: R$ 0.00"
+            android:textColor="@color/prune"
+            android:textSize="12sp" />
+
+        <com.example.fleissig.restaurantapp.ui.widgets.buttons.RoxwinRegularButton
+            android:id="@+id/btnOrderBeforeSendToTheKitchen"
+            style="@style/toolbar_button_style_normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="@string/orders_before_sent_to_the_kitchen" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/toolbar_shadow"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:layout_below="@id/toolbarLayout"
+        android:background="@drawable/toolbar_dropshadow" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/dishes_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbarLayout"
+        android:layout_toLeftOf="@+id/rightLayoutMeusPedidos"
+        android:layout_toRightOf="@+id/leftLayoutMinhaConta"
+        android:divider="@android:color/transparent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbarLayout"
+        android:orientation="horizontal"></LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rightLayoutMeusPedidos"
+        android:layout_width="10dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/toolbarLayout"
+        android:background="@color/prune"
+        android:clickable="true">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvMeusPedidos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/rlMeusPedidos"></android.support.v7.widget.RecyclerView>
+
+        <RelativeLayout
+            android:id="@+id/rlMeusPedidos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btnEnviarPedido">
+
+            <com.example.fleissig.restaurantapp.ui.widgets.textviews.RoxwinRegularTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/listview_vertical_padding_large"
+                android:text="Total"
+                android:textColor="@color/white"
+                android:textSize="28sp" />
+
+            <com.example.fleissig.restaurantapp.ui.widgets.textviews.RoxwinRegularTextView
+                android:id="@+id/tvTotalMeusPedidos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/listview_vertical_padding_large"
+                android:text="R$ 0"
+                android:textColor="@color/white"
+                android:textSize="28sp" />
+        </RelativeLayout>
+
+        <com.example.fleissig.restaurantapp.ui.widgets.buttons.RoxwinRegularButton
+            android:id="@+id/btnEnviarPedido"
+            style="@style/white_button_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/send_request" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/leftLayoutMinhaConta"
+        android:layout_width="10dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/toolbarLayout"
+        android:background="@color/prune"
+        android:clickable="true">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvMinhaConta"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/rlTotal"></android.support.v7.widget.RecyclerView>
+
+
+
+        <RelativeLayout
+            android:id="@+id/rlTotal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/rlOpcional">
+
+            <com.example.fleissig.restaurantapp.ui.widgets.textviews.RoxwinRegularTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/listview_vertical_padding_large"
+                android:text="Total Parcial"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <com.example.fleissig.restaurantapp.ui.widgets.textviews.RoxwinRegularTextView
+                android:id="@+id/tvTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/listview_vertical_padding_large"
+                android:text="R$ 0"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlOpcional"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/rlConfirmedOrder">
+
+            <com.example.fleissig.restaurantapp.ui.widgets.textviews.RoxwinRegularTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/listview_vertical_padding_large"
+                android:text="+10% OPCIONAL"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <com.example.fleissig.restaurantapp.ui.widgets.textviews.RoxwinRegularTextView
+                android:id="@+id/tvOpcionalValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/listview_vertical_padding_large"
+                android:text="R$ 0"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlConfirmedOrder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/rlPaid"
+            android:layout_marginBottom="16dp">
+
+            <com.example.fleissig.restaurantapp.ui.widgets.textviews.RoxwinRegularTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/listview_vertical_padding_large"
+                android:text="SubTotal"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <com.example.fleissig.restaurantapp.ui.widgets.textviews.RoxwinRegularTextView
+                android:id="@+id/tvTotalConfirmedOrderWithOpcional"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/listview_vertical_padding_large"
+                android:text="R$ 0"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rlPaid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/rlTotalLeft"
+            android:layout_marginBottom="16dp">
+
+            <com.example.fleissig.restaurantapp.ui.widgets.textviews.RoxwinRegularTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/listview_vertical_padding_large"
+            android:text="Total Pago"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+            <com.example.fleissig.restaurantapp.ui.widgets.textviews.RoxwinRegularTextView
+                android:id="@+id/tvTotalPaid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/listview_vertical_padding_large"
+                android:text="R$ 0"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rlTotalLeft"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/rlPagarMinhaConta"
+            android:layout_marginBottom="16dp">
+
+            <com.example.fleissig.restaurantapp.ui.widgets.textviews.RoxwinRegularTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/listview_vertical_padding_large"
+                android:text="Total"
+                android:textColor="@color/white"
+                android:textSize="28sp" />
+
+
+
+            <com.example.fleissig.restaurantapp.ui.widgets.textviews.RoxwinRegularTextView
+                android:id="@+id/tvTotalLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/listview_vertical_padding_large"
+                android:text="R$ 0"
+                android:textColor="@color/white"
+                android:textSize="28sp" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rlPagarMinhaConta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="16dp">
+            <com.example.fleissig.restaurantapp.ui.widgets.buttons.RoxwinRegularButton
+                android:id="@+id/btnPagarMinhaConta"
+                style="@style/white_button_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:text="@string/close_account" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:id="@+id/btnPagar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/pagar_top" />
+
+        <ImageView
+            android:id="@+id/btnChamarGarcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/btnPagar"
+            android:src="@drawable/chamar_garcon_top" />
+    </RelativeLayout>
+</RelativeLayout>

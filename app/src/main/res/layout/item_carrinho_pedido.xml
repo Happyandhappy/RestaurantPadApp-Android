@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/rlRightLayout">
+
+        <TextView
+            android:id="@+id/tvPedidoItemName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            tools:text="Tapas PiscoTapas PiscoTapas PiscoTapas PiscoTapas PiscoTapas PiscoTapas PiscoTapas PiscoTapas PiscoTapas Pisco" />
+
+        <TextView
+            android:id="@+id/tvPedidoPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvPedidoItemName"
+            android:textColor="@android:color/black"
+            tools:text="Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvPedidoPrice"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvTitleInformationExtra"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Infomation Extras" />
+
+            <EditText
+                android:id="@+id/etInfomationExtras"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_border"
+                android:textColor="@android:color/black"
+                tools:text="2"
+                android:inputType="text"
+                android:imeOptions="actionDone|flagNoExtractUi"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rlRightLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true">
+
+        <LinearLayout
+            android:id="@+id/llIncreaseDecrease"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnMinusItem"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="0.5dp"
+                android:layout_marginRight="0.5dp"
+                android:background="@drawable/apptheme_btn_default_holo_light"
+                android:text="-"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" x "
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/tvQuantityAdjustable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2"
+                android:textColor="@android:color/black" />
+
+            <Button
+                android:id="@+id/btnPlusItem"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_marginStart="0.5dp"
+                android:background="@drawable/apptheme_btn_default_holo_light"
+                android:text="+"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvTotalAdjustment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llIncreaseDecrease"
+            android:layout_centerHorizontal="true"
+            android:text="Total: R$ 83.00"
+            android:textColor="@color/black" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

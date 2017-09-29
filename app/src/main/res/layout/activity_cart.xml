@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_cart"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/darker_gray"
+    tools:context="com.example.fleissig.restaurantapp.order.CartActivity">
+
+    <TextView
+        android:id="@+id/cart_textview"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:text="Carrinho"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/buttons_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/next_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="0.5dp"
+            android:layout_marginRight="0.5dp"
+            android:layout_weight="1"
+            android:background="@drawable/apptheme_btn_default_holo_light"
+            android:text="Fazer Pedido"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/pay_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="0.5dp"
+            android:layout_marginRight="0.5dp"
+            android:layout_weight="1"
+            android:background="@drawable/apptheme_btn_default_holo_light"
+            android:text="Pagar"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:textColor="@android:color/white"
+            android:layout_marginLeft="0.5dp"
+            android:layout_marginStart="0.5dp"
+            android:background="@drawable/apptheme_btn_default_holo_light"
+            android:id="@+id/price_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            tools:text="$75.00" />
+    </LinearLayout>
+
+    <ListView
+        android:layout_marginTop="20dp"
+        android:dividerHeight="10.0sp"
+        android:layout_below="@id/cart_textview"
+        android:id="@+id/dishes_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/buttons_layout" />
+</RelativeLayout>

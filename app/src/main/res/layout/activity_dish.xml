@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_dish"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.fleissig.restaurantapp.category.DishActivity">
+
+    <LinearLayout
+        android:id="@+id/buttons_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_marginRight="0.5dp"
+            android:layout_marginEnd="0.5dp"
+            android:background="@drawable/apptheme_btn_default_holo_light"
+            android:id="@+id/add_to_card_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="ADD TO CART" />
+
+        <Button
+            android:layout_marginLeft="0.5dp"
+            android:layout_marginStart="0.5dp"
+            android:background="@drawable/apptheme_btn_default_holo_light"
+            android:id="@+id/post_comment_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Post Comment" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingStart="@dimen/activity_horizontal_margin"
+        android:paddingEnd="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:id="@+id/rating_layout"
+        android:layout_above="@id/buttons_layout"
+        android:background="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <RatingBar
+            android:theme="@style/RatingBar"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/rating_ratingbar"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            tools:rating="2" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_above="@id/rating_layout"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingStart="@dimen/activity_horizontal_margin"
+        android:paddingEnd="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:id="@+id/name_price_layout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <RelativeLayout
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+            <TextView
+                android:textStyle="bold"
+                android:id="@+id/dish_name_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                tools:text="Leche de Tigre" />
+            <TextView
+                android:id="@+id/dish_price_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                tools:text="$10.00" />
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/dish_desc_textview"
+            tools:text="Description"
+            android:layout_gravity="start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_above="@id/name_price_layout"
+        android:id="@+id/dish_imageview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        tools:src="@drawable/no_image" />
+
+    <include android:id="@+id/my_toolbar" layout="@layout/my_toolbar" />
+</RelativeLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@android:color/darker_gray</item>
+        <item name="colorControlActivated">@android:color/holo_red_light</item>
+    </style>
+    <style name="RatingBarReview" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@android:color/darker_gray</item>
+        <item name="colorControlActivated">#d8cc1c</item>
+    </style>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="Theme_Dialog" parent="android:Theme.Holo.Dialog">
+        <item name="android:windowMinWidthMajor">90%</item>
+        <item name="android:windowMinWidthMinor">90%</item>
+    </style>
+    <style name="BlackButton">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@color/black</item>
+        <item name="android:textSize">@dimen/common_button_textsize</item>
+        <item name="android:paddingLeft">@dimen/common_button_padding_horizontal</item>
+        <item name="android:paddingRight">@dimen/common_button_padding_horizontal</item>
+        <item name="android:paddingTop">@dimen/common_button_padding_vertical</item>
+        <item name="android:paddingBottom">@dimen/common_button_padding_vertical</item>
+    </style>
+    <style name="CommonButton">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@color/prune</item>
+        <item name="android:textSize">@dimen/common_button_textsize</item>
+        <item name="android:paddingLeft">@dimen/common_button_padding_horizontal</item>
+        <item name="android:paddingRight">@dimen/common_button_padding_horizontal</item>
+        <item name="android:paddingTop">@dimen/common_button_padding_vertical</item>
+        <item name="android:paddingBottom">@dimen/common_button_padding_vertical</item>
+    </style>
+
+    <style name="toolbar_button_style_normal">
+        <item name="android:textSize">12sp</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingRight">8dp</item>
+        <item name="android:minHeight">35dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/button_toolbar_selected</item>
+    </style>
+    <style name="white_button_style">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/prune</item>
+        <item name="android:background">@drawable/white_button_selector</item>
+    </style>
+
+</resources>

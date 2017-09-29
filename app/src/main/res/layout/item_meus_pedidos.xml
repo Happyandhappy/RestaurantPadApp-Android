@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:background="@color/white">
+
+    <Button
+        android:id="@+id/btnXClose"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/prune_button_selector"
+        android:text="X"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+
+    <com.example.fleissig.restaurantapp.ui.widgets.textviews.RoxwinRegularTextView
+        android:id="@+id/tvPedidoItemName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/listview_vertical_padding_large"
+        android:layout_marginTop="@dimen/listview_vertical_padding_large"
+        android:layout_toLeftOf="@+id/btnXClose"
+        android:text="STEAK TARTAR"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <com.example.fleissig.restaurantapp.ui.widgets.textviews.RoxwinRegularTextView
+        android:id="@+id/tvQuantidade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvPedidoItemName"
+        android:layout_marginLeft="@dimen/listview_vertical_padding_large"
+        android:layout_marginTop="@dimen/listview_horizontal_padding"
+        android:text="STEAK TARTAR"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <com.example.fleissig.restaurantapp.ui.widgets.textviews.RoxwinRegularTextView
+        android:id="@+id/tvTotalAdjustment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tvQuantidade"
+        android:paddingBottom="@dimen/listview_horizontal_padding"
+        android:layout_marginRight="@dimen/listview_horizontal_padding"
+        android:layout_marginTop="8dp"
+        android:text="R$ 83"
+        android:textColor="@color/prune"
+        android:textSize="28sp" />
+
+    <RelativeLayout
+        android:id="@+id/checkComment"
+        android:layout_width="wrap_content"
+        android:layout_alignBottom="@+id/tvTotalAdjustment"
+        android:layout_alignTop="@+id/tvTotalAdjustment"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvQuantidade"
+        android:background="@color/prune">
+
+        <com.example.fleissig.restaurantapp.ui.widgets.textviews.RoxwinRegularTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/listview_vertical_padding_large"
+            android:layout_marginRight="@dimen/listview_vertical_padding_large"
+            android:text="Personalizado"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </RelativeLayout>
+</RelativeLayout>
